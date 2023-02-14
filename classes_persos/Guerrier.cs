@@ -12,6 +12,7 @@ namespace DMCsharp
         public int CurrentLife { get; set; }
         public int CurrentAttackNumber { get; set; }
         public int TotalAttackNumber { get; set; }
+        public int DegatsSubis { get; set; }
 
         public Guerrier()
         {
@@ -23,6 +24,16 @@ namespace DMCsharp
             CurrentLife = 200;
             CurrentAttackNumber = 2;
             TotalAttackNumber = 2;
+        }
+
+        public void DoAttack(ICharacter Player1, ICharacter Player2, int margeAttaque)
+        {
+            // Douleur
+            // if(Player1.CurrentLife <= 0){
+
+            // }
+            System.Console.WriteLine("TEEEEEEESTT");
+            Player2.CurrentLife -= margeAttaque * Player1.Attack / 100;
         }
     }
 }
