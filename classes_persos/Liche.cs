@@ -12,8 +12,12 @@ namespace DMCsharp
         public int CurrentLife { get; set; }
         public int CurrentAttackNumber { get; set; }
         public int TotalAttackNumber { get; set; }
+        public int JetInitiativeCeRound { get; set; }
+        public string name { get; set; }
 
-        public Liche()
+
+
+        public Liche(string name)
         {
             Attack = 75;
             Defense =125;
@@ -23,6 +27,7 @@ namespace DMCsharp
             CurrentLife = 125;
             CurrentAttackNumber = 3;
             TotalAttackNumber = 3;
+            this.name = name;
         }
     }
 }

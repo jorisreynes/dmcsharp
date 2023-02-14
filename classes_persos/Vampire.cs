@@ -12,8 +12,12 @@ namespace DMCsharp
         public int CurrentLife { get; set; }
         public int CurrentAttackNumber { get; set; }
         public int TotalAttackNumber { get; set; }
+        public int JetInitiativeCeRound { get; set; }
+        public string name { get; set; }
 
-        public Vampire()
+
+
+        public Vampire(string name)
         {
             Attack = 100;
             Defense =100;
@@ -23,6 +27,7 @@ namespace DMCsharp
             CurrentLife = 300;
             CurrentAttackNumber = 2;
             TotalAttackNumber = 2;
+            this.name = name;
         }
     }
 }

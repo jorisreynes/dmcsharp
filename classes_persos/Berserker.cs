@@ -12,8 +12,13 @@ namespace DMCsharp
         public int CurrentLife { get; set; }
         public int CurrentAttackNumber { get; set; }
         public int TotalAttackNumber { get; set; }
+        public int JetInitiativeCeRound { get; set; }
+        public string name { get; set; }
 
-        public Berserker()
+
+        
+
+        public Berserker(string name)
         {
             Attack = 100;
             Defense =100;
@@ -23,6 +28,7 @@ namespace DMCsharp
             CurrentLife = 300;
             CurrentAttackNumber = 1;
             TotalAttackNumber = 1;
+            this.name = name;
         }
           public void DoAttack(ICharacter Player1, ICharacter Player2, int margeAttaque)
         {

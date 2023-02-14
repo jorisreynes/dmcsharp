@@ -12,8 +12,12 @@ namespace DMCsharp
         public int CurrentLife { get; set; }
         public int CurrentAttackNumber { get; set; }
         public int TotalAttackNumber { get; set; }
+        public int JetInitiativeCeRound { get; set; }
+        public string name { get; set; }
 
-        public Kamikaze()
+
+
+        public Kamikaze(string name)
         {
             Attack = 50;
             Defense =125;
@@ -23,6 +27,7 @@ namespace DMCsharp
             CurrentLife = 500;
             CurrentAttackNumber = 6;
             TotalAttackNumber = 6;
+            this.name = name;
         }
     }
 }

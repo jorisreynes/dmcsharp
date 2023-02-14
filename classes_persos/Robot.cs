@@ -12,8 +12,12 @@ namespace DMCsharp
         public int CurrentLife { get; set; }
         public int CurrentAttackNumber { get; set; }
         public int TotalAttackNumber { get; set; }
+        public int JetInitiativeCeRound { get; set; }
+        public string name { get; set; }
 
-        public Robot()
+
+
+        public Robot(string name)
         {
             Attack = 10;
             Defense =100;
@@ -23,6 +27,7 @@ namespace DMCsharp
             CurrentLife = 200;
             CurrentAttackNumber = 1;
             TotalAttackNumber = 1;
+            this.name = name;
         }
     }
 }

@@ -11,14 +11,18 @@ namespace DMCsharp
         public int CurrentLife { get; set; }
         public int CurrentAttackNumber { get; set; }
         public int TotalAttackNumber { get; set; }
+        public int JetInitiativeCeRound { get; set; }
+        public string name { get; set; }
 
-        public void DoAttack(ICharacter Player1, ICharacter Player2, int margeAttaque)
+
+
+        public virtual void DoAttack(ICharacter Player1, ICharacter Player2, int margeAttaque)
         {
             Player2.CurrentLife -= margeAttaque * Player1.Attack / 100;
 
         }
 
-        public void DoCounterAttack(ICharacter Player1, ICharacter Player2, int margeAttaque)
+        public virtual void DoCounterAttack(ICharacter Player1, ICharacter Player2, int margeAttaque)
         {
             Player2.CurrentLife -= margeAttaque * Player1.Attack / 100 + Math.Abs(margeAttaque);
 

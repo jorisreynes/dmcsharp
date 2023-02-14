@@ -12,8 +12,12 @@ namespace DMCsharp
         public int CurrentLife { get; set; }
         public int CurrentAttackNumber { get; set; }
         public int TotalAttackNumber { get; set; }
+        public int JetInitiativeCeRound { get; set; }
+        public string name { get; set; }
 
-        public Pretre()
+
+
+        public Pretre(string name)
         {
             Attack = 75;
             Defense =125;
@@ -23,6 +27,7 @@ namespace DMCsharp
             CurrentLife = 150;
             CurrentAttackNumber = 1;
             TotalAttackNumber = 1;
+            this.name = name;
         }
     }
 }
