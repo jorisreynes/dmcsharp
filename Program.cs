@@ -100,6 +100,8 @@ System.Console.WriteLine();
 
 List<ICharacter> deadPlayers = new List<ICharacter>();
 
+int round = 1;
+
 // Boucle du jeu (tant qu'il reste plus d'un joueur en vie)
 while (players.Count(p => p.CurrentLife > 0) > 1)
 //while (players.Count > 1)
@@ -115,13 +117,24 @@ while (players.Count(p => p.CurrentLife > 0) > 1)
 
     int numeroDuJoueur = 0;
 
-
+    
 
     // Boucle de round de jeu
     foreach(var player in players)
     {
         if(player.CurrentLife >= 0)
         {
+            Console.ForegroundColor = ConsoleColor.White;
+            System.Console.WriteLine();
+            System.Console.WriteLine("Round " + round);
+            round++;
+            System.Console.WriteLine();
+
+            System.Console.WriteLine("Pressez une touche pour continuer");
+            while(Console.ReadLine() == null){
+                //boucle d'attente
+            }
+
             numeroDuJoueur++;
 
             // On définit une cible aléatoire
